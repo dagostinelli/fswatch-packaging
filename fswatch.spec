@@ -12,7 +12,7 @@ BuildRequires: autoconf automake libtool
 BuildRequires: gcc-c++ gcc gettext-devel
 
 %description
-%{name} is a file change monitor that receives notifications when files or directories change.
+%{name} is a cross-platform file change monitor.
 
 %package devel
 Summary:	Development files for %{name}
