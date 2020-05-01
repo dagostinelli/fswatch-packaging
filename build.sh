@@ -14,8 +14,8 @@ rpmbuild -bs fswatch.spec
 rpmbuild -ba fswatch.spec
 
 # RUN mock
-mock -r fedora-31-x86_64 --resultdir ~/rpmbuild/RPMS/x86_64 ~/rpmbuild/SRPMS/fswatch-0.1.31-1.fc31.src.rpm
-mock -r epel-7-x86_64 --resultdir ~/rpmbuild/RPMS/x86_64 ~/rpmbuild/SRPMS/fswatch-0.1.31-1.fc27.src.rpm
+rpmbuild -bs fswatch.spec && mock -r fedora-31-x86_64 --resultdir ~/rpmbuild/RPMS/x86_64 ~/rpmbuild/SRPMS/fswatch-1.14.0-1.fc31.src.rpm
+rpmbuild -bs fswatch.spec && mock -r epel-7-x86_64 --resultdir ~/rpmbuild/RPMS/x86_64 ~/rpmbuild/SRPMS/fswatch-1.14.0-1.fc31.src.rpm
 
 # Do these manually
 
