@@ -19,7 +19,7 @@ Summary:	Development files for %{name}
 Requires: %{name}%{?_isa} = %{version}-%{release}
 
 %description devel
-The %{name}-devel package contains libraries and headers for developing applications that use lib%{name}.
+The %{name}-devel package contains libraries and headers for lib%{name}.
 
 %package static
 Summary:	Static library for %{name}
@@ -41,15 +41,8 @@ Static library (.a) of lib%{name}.
 mkdir $RPM_BUILD_ROOT%{_mandir}/man1/
 mv $RPM_BUILD_ROOT%{_mandir}/man7/%{name}.7 $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
 rm -f $RPM_BUILD_ROOT%{_libdir}/*.la
-rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/README.bsd
-rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/README.codestyle
-rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/README.freebsd
-rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/README.gnu-build-system
-rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/README.illumos
-rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/README.osx
-rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/README.smartos
-rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/README.solaris
-rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/README.windows
+rm -f $RPM_BUILD_ROOT%{_docdir}/%{name}/*
+
 %find_lang %{name}
 
 %check
