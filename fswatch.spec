@@ -2,7 +2,7 @@
 
 Name:		fswatch
 Version:	1.14.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	A cross-platform file change monitor
 License:	GPLv3
 URL:		https://github.com/emcrisostomo/fswatch
@@ -69,5 +69,9 @@ make check
 %{_libdir}/*.a
 
 %changelog
+* Sat Apr 11 2020 Darryl T. Agostinelli <dagostinelli@gmail.com> 1.14.0-2
+- Corrections made for package review process
+
 * Sat Apr 11 2020 Darryl T. Agostinelli <dagostinelli@gmail.com> 1.14.0-1
 - Created the .spec file for version 1.14.0
+
