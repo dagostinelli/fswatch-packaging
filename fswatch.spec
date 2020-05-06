@@ -69,7 +69,7 @@ make check
 %{_libdir}/*.a
 
 %changelog
-* Sat Apr 11 2020 Darryl T. Agostinelli <dagostinelli@gmail.com> 1.14.0-2
+* Sun May 03 2020 Darryl T. Agostinelli <dagostinelli@gmail.com> 1.14.0-2
 - Corrections made for package review process
 
 * Sat Apr 11 2020 Darryl T. Agostinelli <dagostinelli@gmail.com> 1.14.0-1
