@@ -2,9 +2,9 @@
 
 Name:		fswatch
 Version:	1.14.0
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	A cross-platform file change monitor
-License:	GPLv3
+License:	GPLv3+
 URL:		https://github.com/emcrisostomo/fswatch
 Source0:	%{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
@@ -16,7 +16,7 @@ BuildRequires: gcc-c++ gcc gettext-devel
 
 %package devel
 Summary:	Development files for %{name}
-Requires: %{name}%{?_isa} = %{version}-%{release}
+Requires:	%{name}%{?_isa} = %{version}-%{release}
 
 %description devel
 The %{name}-devel package contains libraries and headers for lib%{name}.
@@ -51,7 +51,6 @@ make check
 %ldconfig_scriptlets
 
 %files -f %{name}.lang
-%defattr(-,root,root,-)
 %doc README.md README.linux AUTHORS NEWS CONTRIBUTING.md ABOUT-NLS
 %license COPYING
 %{_bindir}/%{name}
@@ -59,19 +58,19 @@ make check
 %{_mandir}/man1/%{name}.1.*
 
 %files devel
-%defattr(-,root,root,-)
 %doc README.libfswatch.md AUTHORS.libfswatch NEWS.libfswatch
 %{_libdir}/lib%{name}.so
 %{_includedir}/lib%{name}/*
 
 %files static
-%defattr(-,root,root,-)
 %{_libdir}/*.a
 
 %changelog
+* Thu May 21 2020 Darryl T. Agostinelli <dagostinelli@gmail.com> 1.14.0-3
+- Corrections made for package review process
+
 * Sun May 03 2020 Darryl T. Agostinelli <dagostinelli@gmail.com> 1.14.0-2
 - Corrections made for package review process
 
 * Sat Apr 11 2020 Darryl T. Agostinelli <dagostinelli@gmail.com> 1.14.0-1
 - Created the .spec file for version 1.14.0
-
